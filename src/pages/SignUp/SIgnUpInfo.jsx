@@ -1,8 +1,12 @@
 import Input from "../../components/Input"
 
-const SignUpInfo = () => {
+const SignUpInfo = ({
+  handleEmailBlur,
+  handleEmailChange,
+  emailError
+}) => {
   return (
-    <div className="flex flex-col items-center space-y-3">
+    <div className="flex flex-col items-center space-y-4">
       <Input
         label="Fisrt Name"
         type="text"
@@ -13,10 +17,13 @@ const SignUpInfo = () => {
         type="text"
         placeholder="Enter Your Last Name"
       />
-      <Input 
+      <Input
         label="Email"
         type="text"
         placeholder="Enter your Email"
+        handleEmailBlur={handleEmailBlur}
+        handleEmailChange={handleEmailChange}
+        emailError={emailError}
       />
       <Input
         label="Enter Password"
@@ -24,7 +31,7 @@ const SignUpInfo = () => {
         placeholder="Enter a Password"
       />
 
-      <Input 
+      <Input
         label="Confirm Your Password"
         type="password"
         placeholder="Confirm your password"

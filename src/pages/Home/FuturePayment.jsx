@@ -32,7 +32,7 @@ const FuturePayment = () => {
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (
-            <div key={index} className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div key={index} className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-lg hover:shadow-[#d4d4d4] transition-shadow duration-400 cursor-pointer">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
             </div>

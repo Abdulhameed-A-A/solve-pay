@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
-import AuthWrapper from "../../components/AuthWrapper"
-import SignUpInfo from "./SIgnUpInfo"
 
-const SignUpPage = () => {
+const Ink = () => {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
   const [isTouched, setIsTouched] = useState(false);
@@ -78,22 +76,4 @@ const SignUpPage = () => {
       document.removeEventListener('keydown', handleEscape);
     };
   }, [isPopupOpen])
-
-  return (
-    <>
-      <AuthWrapper isLogin={false}>
-        <SignUpInfo
-          closePopup={closePopup}
-          emailError={emailError}
-          email={email}
-          handleEmailBlur={handleEmailBlur}
-          handleEmailChange={handleEmailChange}
-          isPopupOpen={isPopupOpen}
-          handleSubmit={handleSubmit}
-        />
-      </AuthWrapper>
-    </>
-  )
 }
-
-export default SignUpPage

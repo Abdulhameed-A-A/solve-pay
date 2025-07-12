@@ -13,7 +13,7 @@ const Input = ({ type, name, placeholder, label, emailError, handleEmailBlur, ha
   const isPassword = type === "password";
 
   return (
-    <div className="flex flex-col space-y-1 relative">
+    <div className="flex flex-col space-y-2 relative">
       <label htmlFor={name} className="font-medium text-[#5f5f5f] pl-[5px]">{label}</label>
       <div className="relative">
         <input

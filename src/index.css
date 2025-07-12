@@ -18,7 +18,7 @@
   }
 
   .SignUp-Input{
-    @apply py-3 pl-4 pr-18 text-gray-700 border border-gray-300 rounded-[15px] focus:outline-none focus:ring-1 focus:ring-myGreen shadow-sm
+    @apply py-3 pl-4 pr-18 text-gray-700 border border-gray-300 rounded-[15px] focus:outline-none focus:ring-1 focus:ring-myGreen shadow-inner
   }
 }
 

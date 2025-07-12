@@ -1,12 +1,12 @@
 import Input from "../../components/Input";
 
 const LoginInfo = ({
-    closePopup,
-    emailError,
-    handleEmailBlur,
-    handleEmailChange,
-    isPopupOpen
-  }) => {
+  closePopup,
+  emailError,
+  handleEmailBlur,
+  handleEmailChange,
+  isPopupOpen
+}) => {
 
   return (
     <>
