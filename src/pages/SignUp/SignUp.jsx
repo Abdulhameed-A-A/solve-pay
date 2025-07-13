@@ -1,83 +1,17 @@
-import { useState, useEffect } from "react";
-import AuthWrapper from "../../components/AuthWrapper"
-import SignUpInfo from "./SIgnUpInfo"
+import AuthWrapper from "../../components/AuthWrapper";
+import SignUpInfo from "./SIgnUpInfo";
+import useEmailForm from "../../hooks/useEmailForm";
 
 const SignUpPage = () => {
-  const [email, setEmail] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [isTouched, setIsTouched] = useState(false);
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-  };
-
-  const handleEmailChange = (e) => {
-    const value = e.target.value;
-    setEmail(value);
-
-    if (isTouched) {
-      if (!value) {
-        setEmailError("Email is required");
-      } else if (!validateEmail(value)) {
-        setEmailError("Please enter a valid email address");
-      } else {
-        {/* Success Icon */ }
-        setEmailError("");
-      }
-    }
-  };
-
-  const handleEmailBlur = () => {
-    setIsTouched(true);
-    if (!email) {
-      setEmailError("Email is required");
-    } else if (!validateEmail(email)) {
-      setEmailError("Please enter a valid email address");
-    } else {
-      setEmailError("");
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsTouched(true);
-
-    if (!email) {
-      setEmailError("Email is required");
-      return;
-    }
-
-    if (!validateEmail(email)) {
-      setEmailError("Please enter a valid email address");
-      return;
-    }
-
-    console.log("Signing up with email:", email);
-    setIsPopupOpen(true)
-  };
-
-  const closePopup = () => {
-    setIsPopupOpen(false)
-  }
-
-
-  useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === 'Escape') {
-        closePopup();
-      }
-    };
-
-    if (isPopupOpen) {
-      document.addEventListener('keydown', handleEscape);
-    }
-
-    return () => {
-      document.removeEventListener('keydown', handleEscape);
-    };
-  }, [isPopupOpen])
+  const {
+    email,
+    emailError,
+    isPopupOpen,
+    handleEmailChange,
+    handleEmailBlur,
+    handleSubmit,
+    closePopup,
+  } = useEmailForm();
 
   return (
     <>
@@ -93,7 +27,7 @@ const SignUpPage = () => {
         />
       </AuthWrapper>
     </>
-  )
-}
+  );
+};
 
-export default SignUpPage
+export default SignUpPage;

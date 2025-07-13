@@ -1,0 +1,1 @@
+export const authClasses = "block py-2 px-4 bg-myGreen text-white rounded-md shadow-sm text-center cursor-pointer"

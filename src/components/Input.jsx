@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { inputClasses } from "../styles/inputClasses";
 
 const EyeIcon = ({ open }) => (
   open ? (
@@ -19,7 +20,7 @@ const Input = ({ type, name, placeholder, label, emailError, handleEmailBlur, ha
         <input
           name={name}
           type={isPassword && showPassword ? "text" : type}
-          className="SignUp-Input text-[#4a4a4a] rounded-[5px] pr-10"
+          className={`${inputClasses} text-[#4a4a4a] rounded-[5px] pr-10`}
           placeholder={placeholder}
           onChange={handleEmailChange}
           onBlur={handleEmailBlur}

@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @theme {
   --color-deepGreen: #180D39;
   --color-myGreen: #2A8E9E;
@@ -8,19 +7,7 @@
   --color-myWhite: #E9F3F4
 }
 
-@layer components {
-  .header-list{
-    @apply text-deepGreen text-[15px] font-bold list-none;
-  }
 
-  .SignUp{
-    @apply block py-2 px-4 bg-myGreen text-white rounded-md shadow-sm text-center cursor-pointer
-  }
-
-  .SignUp-Input{
-    @apply py-3 pl-4 pr-18 text-gray-700 border border-gray-300 rounded-[15px] focus:outline-none focus:ring-1 focus:ring-myGreen shadow-inner
-  }
-}
 
 body {
   font-family: Helvetica;

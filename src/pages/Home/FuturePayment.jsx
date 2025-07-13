@@ -1,3 +1,5 @@
+import { sectionClasses, cardClasses } from "../../styles/futurePaymentClasses";
+
 const FuturePayment = () => {
   const features = [
     {
@@ -19,7 +21,7 @@ const FuturePayment = () => {
   ];
 
   return (
-    <section className="bg-[#fefefd] py-16 px-4 sm:px-6 lg:px-8 shadow-lg mt-[30px] rounded-[20px]">
+    <section className={sectionClasses} >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -32,7 +34,7 @@ const FuturePayment = () => {
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (
-            <div key={index} className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-lg hover:shadow-[#d4d4d4] transition-shadow duration-400 cursor-pointer">
+            <div key={index} className={cardClasses}>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
             </div>

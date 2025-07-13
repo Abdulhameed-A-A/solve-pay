@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png"
-
+import { authClasses } from "../styles/authClassess";
 
 const AuthWrapper = ({ children, isLogin = true, handleSubmit, emailError, email }) => {
 
@@ -26,7 +26,7 @@ const AuthWrapper = ({ children, isLogin = true, handleSubmit, emailError, email
 
         <div className="flex flex-col items-center ]">
           <button
-            className="SignUp px-20"
+            className={`${authClasses} px-20 } text-[15px]`}
             onClick={handleSubmit}
             disabled={!!emailError || !email}
           >{isLogin? "Login": "SignUp"}</button>
