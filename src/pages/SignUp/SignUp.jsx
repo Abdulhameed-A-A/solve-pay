@@ -1,6 +1,6 @@
 import AuthWrapper from "../../components/AuthWrapper";
 import SignUpInfo from "./SIgnUpInfo";
-import useEmailForm from "../../hooks/useEmailForm";
+import useEmailForm from "../../../Replaced Codes/useEmailForm";
 
 const SignUpPage = () => {
   const {

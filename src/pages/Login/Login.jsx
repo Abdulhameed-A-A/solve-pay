@@ -1,6 +1,6 @@
 import AuthWrapper from "../../components/AuthWrapper";
 import LoginInfo from "./LoginInfo";
-import useEmailForm from "../../hooks/useEmailForm";
+import useEmailForm from "../../../Replaced Codes/useEmailForm";
 
 const Login = () => {
   const {
@@ -18,6 +18,7 @@ const Login = () => {
       handleSubmit={handleSubmit}
       emailError={emailError}
       email={email}
+      isLogin={true}
     >
       <LoginInfo
         closePopup={closePopup}

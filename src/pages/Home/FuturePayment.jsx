@@ -1,4 +1,4 @@
-import { sectionClasses, cardClasses } from "../../styles/futurePaymentClasses";
+import styles from "../../styles/FuturePaymentStyles";
 
 const FuturePayment = () => {
   const features = [
@@ -21,7 +21,7 @@ const FuturePayment = () => {
   ];
 
   return (
-    <section className={sectionClasses} >
+    <section className={styles.sectionClasses} >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -34,7 +34,7 @@ const FuturePayment = () => {
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (
-            <div key={index} className={cardClasses}>
+            <div key={index} className={styles.cardClasses}>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
             </div>

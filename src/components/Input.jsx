@@ -9,7 +9,7 @@ const EyeIcon = ({ open }) => (
   )
 );
 
-const Input = ({ type, name, placeholder, label, emailError, handleEmailBlur, handleEmailChange }) => {
+const Input = ({ type, name, placeholder, label, onChange, onBlur, emailError }) => {
   const [showPassword, setShowPassword] = useState(false);
   const isPassword = type === "password";
 
@@ -22,8 +22,8 @@ const Input = ({ type, name, placeholder, label, emailError, handleEmailBlur, ha
           type={isPassword && showPassword ? "text" : type}
           className={`${inputClasses} text-[#4a4a4a] rounded-[5px] pr-10`}
           placeholder={placeholder}
-          onChange={handleEmailChange}
-          onBlur={handleEmailBlur}
+          onChange={onChange}
+          onBlur={onBlur}
         />
         {isPassword && (
           <button
