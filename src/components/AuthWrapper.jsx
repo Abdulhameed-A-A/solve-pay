@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png"
-import { authClasses } from "../styles/authClassess";
+import logo from "../assets/logo.png";
 import styles from "../styles/AuthWrapperStyles";
+import Button from "../styles/Button";
 
 const AuthWrapper = ({ children, isLogin, handleSubmit, emailError, email }) => {
-
-
 
   return (
     <div className={styles.wrapperContainer}>
@@ -27,11 +25,12 @@ const AuthWrapper = ({ children, isLogin, handleSubmit, emailError, email }) => 
         {children}
 
         <div className={styles.buttonContainer}>
-          <button
-            className={`${authClasses} ${styles.buttonStyle}`}
+          <Button
+            variant='dark'
+            className="px-20"
             onClick={handleSubmit}
             disabled={!!emailError || !email}
-          >{isLogin ? "Login" : "SignUp"}</button>
+          >{isLogin ? "Login" : "SignUp"}</Button>
         </div>
 
         <div className={styles.linkContainer}>

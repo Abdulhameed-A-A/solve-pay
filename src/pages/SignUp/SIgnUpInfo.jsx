@@ -71,7 +71,8 @@ const SignUpInfo = () => {
         label="Email"
         type="text"
         placeholder="Enter your Email"
-        name="email"        onChange={handleInputChange}
+        name="email"        
+        onChange={handleInputChange}
         onBlur={() => {
           if (!validateEmail(formData.email)) {
             setFormErrors((prev) => ({ ...prev, email: "Invalid email address" }));
